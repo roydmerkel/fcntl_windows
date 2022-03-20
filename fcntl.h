@@ -3,6 +3,10 @@
 
 #include <windows.h>
 
+#if !defined(_MSC_VER)
+#include <sys/types.h>
+#endif
+
 /* FCNTL ops */
 #define F_LINUX_SPECIFIC_BASE        1024
 
@@ -206,8 +210,8 @@ struct _QWORD {
 
 #if defined(_MSC_VER)
 typedef unsigned int pid_t;			/* process ID of requesting task */
-typedef LONG off_t;
 #endif
+typedef LONG off_t;
 
 struct flock
   {
