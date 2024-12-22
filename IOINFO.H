@@ -207,7 +207,7 @@
 	}
 	#endif
 
-	#define _osfhnd(i)  ( (_pioinfo(i)) ? _pioinfo(i)->osfhnd : NULL )
+	#define _osfhnd(i)  ( (_pioinfo(i)) ? _pioinfo(i)->osfhnd : 0)
 
 	#define _osfile(i)  ( (_pioinfo(i)) ? _pioinfo(i)->osfile : 0)
 
